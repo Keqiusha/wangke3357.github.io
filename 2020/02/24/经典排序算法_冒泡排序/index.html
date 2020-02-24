@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/3 | Peter的博客</title>
+  <title>经典排序算法-冒泡排序算法 | Peter的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="巢湖学院16级，就职于腾讯SNG。擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Peter的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/03/index.html">
+  <meta name="description" content="排序算法 思路  1234明确有两层循环外循环和循环,因为排序算法是相邻两个数之间进行比较比较次数为n-1次 因为当前元素要和n-1个元素进行比较,然后内层则为相邻两个元素进行比较,且内层j从i开始因为之前的位置已经排好根据逻辑关系从而依靠中间变量实现排序    外层循环 内层循环     i的范围[0,n) j从i位置开始   需要比较 n-1次 比较之后进行交换     代码展示 12345">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="经典排序算法-冒泡排序算法">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/经典排序算法_冒泡排序/index.html">
 <meta property="og:site_name" content="Peter的博客">
-<meta property="og:description" content="巢湖学院16级，就职于腾讯SNG。擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。">
+<meta property="og:description" content="排序算法 思路  1234明确有两层循环外循环和循环,因为排序算法是相邻两个数之间进行比较比较次数为n-1次 因为当前元素要和n-1个元素进行比较,然后内层则为相邻两个元素进行比较,且内层j从i开始因为之前的位置已经排好根据逻辑关系从而依靠中间变量实现排序    外层循环 内层循环     i的范围[0,n) j从i位置开始   需要比较 n-1次 比较之后进行交换     代码展示 12345">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-02-24T12:45:39.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Peter的博客">
-<meta name="twitter:description" content="巢湖学院16级，就职于腾讯SNG。擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。">
+<meta name="twitter:title" content="经典排序算法-冒泡排序算法">
+<meta name="twitter:description" content="排序算法 思路  1234明确有两层循环外循环和循环,因为排序算法是相邻两个数之间进行比较比较次数为n-1次 因为当前元素要和n-1个元素进行比较,然后内层则为相邻两个元素进行比较,且内层j从i开始因为之前的位置已经排好根据逻辑关系从而依靠中间变量实现排序    外层循环 内层循环     i的范围[0,n) j从i位置开始   需要比较 n-1次 比较之后进行交换     代码展示 12345">
   
     <link rel="alternative" href="/atom.xml" title="Peter的博客" type="application/atom+xml">
   
@@ -154,239 +155,192 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-经典排序算法_冒泡排序" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      经典排序算法-冒泡排序算法
+    </h1>
+  
+
+        
+        <a href="/2020/02/24/经典排序算法_冒泡排序/" class="archive-article-date">
+  	<time datetime="2020-02-24T12:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><blockquote>
+<p>思路</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">明确有两层循环外循环和循环,因为排序算法是相邻两个数之间进行比较</span><br><span class="line">比较次数为n-1次 因为当前元素要和n-1个元素进行比较,然后内层则为相</span><br><span class="line">邻两个元素进行比较,且内层j从i开始因为之前的位置已经排好根据逻辑关</span><br><span class="line">系从而依靠中间变量实现排序</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>外层循环</th>
+<th>内层循环</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i的范围[0,n)</td>
+<td>j从i位置开始</td>
+</tr>
+<tr>
+<td>需要比较 n-1次</td>
+<td>比较之后进行交换</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h5 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a><strong>代码展示</strong></h5></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package day01;</span><br><span class="line"></span><br><span class="line">public class Arithmetic &#123;</span><br><span class="line">	</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		int a[] = &#123;10 , 5 ,4 , 3 &#125;;</span><br><span class="line">		Bubble_sort(a, 4);</span><br><span class="line">		for(int num_key = 0;num_key &lt;4;num_key++) </span><br><span class="line">		&#123;</span><br><span class="line">			</span><br><span class="line">			System.out.println(a[num_key]);</span><br><span class="line">		&#125; </span><br><span class="line">	&#125;</span><br><span class="line">	public static void Bubble_sort(int a[], int n)&#123;</span><br><span class="line">		int temp;</span><br><span class="line">		for(int i = 0; i &lt; n-1; i++) // 告诉计算机 一共有多少个位置需要调换 </span><br><span class="line">	    &#123;</span><br><span class="line">	        //每一轮比较前n-1-i个，即已排序好的最后i个不用比较</span><br><span class="line">	        for(int j=0; j&lt;n-1-i; j++) // 相邻两个数的比较 </span><br><span class="line">	        &#123; </span><br><span class="line">	            if(a[j] &gt; a[j+1]) // 符号控制的是 顺序 </span><br><span class="line">	            &#123;</span><br><span class="line">	                temp = a[j];</span><br><span class="line">	                a[j] = a[j+1];</span><br><span class="line">	                a[j+1] = temp;</span><br><span class="line">	            &#125;</span><br><span class="line">	        &#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/16/插入音频视屏/" class="archive-article-date">
-  	<time datetime="2019-03-16T08:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/16/插入音频视屏/">插入音频视屏</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/24/经典排序算法_冒泡排序/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/16/2019-3-16/" class="archive-article-date">
-  	<time datetime="2019-03-16T01:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/18/个人本科比赛简历/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">个人本科简历</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/16/2019-3-16/">恋爱日记</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">恋爱日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/15/关于hexo中的error/" class="archive-article-date">
-  	<time datetime="2019-03-15T04:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/15/关于hexo中的error/">hexo部署到github上的问题解决</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/10/2019-3-10/" class="archive-article-date">
-  	<time datetime="2019-03-10T04:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/10/2019-3-10/">hexo 表格,图片插入及排版</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/09/个人博客上线github总结/" class="archive-article-date">
-  	<time datetime="2019-03-09T13:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/09/个人博客上线github总结/">个人博客上线github总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/09/hello-world/" class="archive-article-date">
-  	<time datetime="2019-03-09T10:41:17.416Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -409,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
