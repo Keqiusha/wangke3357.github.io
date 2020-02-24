@@ -12,11 +12,11 @@
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="经典排序算法-冒泡排序算法">
-<meta property="og:url" content="http://yoursite.com/2020/02/24/经典排序算法_冒泡排序/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/冒泡/index.html">
 <meta property="og:site_name" content="Peter的博客">
 <meta property="og:description" content="排序算法 思路  1234明确有两层循环外循环和循环,因为排序算法是相邻两个数之间进行比较比较次数为n-1次 因为当前元素要和n-1个元素进行比较,然后内层则为相邻两个元素进行比较,且内层j从i开始因为之前的位置已经排好根据逻辑关系从而依靠中间变量实现排序    外层循环 内层循环     i的范围[0,n) j从i位置开始   需要比较 n-1次 比较之后进行交换     代码展示 12345">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-24T14:02:41.212Z">
+<meta property="og:updated_time" content="2020-02-24T14:04:03.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="经典排序算法-冒泡排序算法">
 <meta name="twitter:description" content="排序算法 思路  1234明确有两层循环外循环和循环,因为排序算法是相邻两个数之间进行比较比较次数为n-1次 因为当前元素要和n-1个元素进行比较,然后内层则为相邻两个元素进行比较,且内层j从i开始因为之前的位置已经排好根据逻辑关系从而依靠中间变量实现排序    外层循环 内层循环     i的范围[0,n) j从i位置开始   需要比较 n-1次 比较之后进行交换     代码展示 12345">
@@ -155,7 +155,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-经典排序算法_冒泡排序" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-冒泡" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -167,7 +167,7 @@
   
 
         
-        <a href="/2020/02/24/经典排序算法_冒泡排序/" class="archive-article-date">
+        <a href="/2020/02/24/冒泡/" class="archive-article-date">
   	<time datetime="2020-02-24T12:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
 </a>
         
@@ -201,7 +201,6 @@
 <blockquote>
 <h5 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a><strong>代码展示</strong></h5></blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package day01;</span><br><span class="line"></span><br><span class="line">public class Arithmetic &#123;</span><br><span class="line">	</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		int a[] = &#123;10 , 5 ,4 , 3 &#125;;</span><br><span class="line">		Bubble_sort(a, 4);</span><br><span class="line">		for(int num_key = 0;num_key &lt;4;num_key++) </span><br><span class="line">		&#123;</span><br><span class="line">			</span><br><span class="line">			System.out.println(a[num_key]);</span><br><span class="line">		&#125; </span><br><span class="line">	&#125;</span><br><span class="line">	public static void Bubble_sort(int a[], int n)&#123;</span><br><span class="line">		int temp;</span><br><span class="line">		for(int i = 0; i &lt; n-1; i++) // 告诉计算机 一共有多少个位置需要调换 </span><br><span class="line">	    &#123;</span><br><span class="line">	        //每一轮比较前n-1-i个，即已排序好的最后i个不用比较</span><br><span class="line">	        for(int j=0; j&lt;n-1-i; j++) // 相邻两个数的比较 </span><br><span class="line">	        &#123; </span><br><span class="line">	            if(a[j] &gt; a[j+1]) // 符号控制的是 顺序 </span><br><span class="line">	            &#123;</span><br><span class="line">	                temp = a[j];</span><br><span class="line">	                a[j] = a[j+1];</span><br><span class="line">	                a[j+1] = temp;</span><br><span class="line">	            &#125;</span><br><span class="line">	        &#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
       
 
       
@@ -291,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/24/经典排序算法_冒泡排序/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/24/冒泡/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,18 +304,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/24/冒泡/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          经典排序算法-冒泡排序算法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/18/个人本科比赛简历/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">个人本科简历</div>
+    <a href="/2020/02/24/经典排序算法_冒泡排序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">经典排序算法-冒泡排序算法</div>
       <i class="icon-circle-right"></i>
     </a>
   
