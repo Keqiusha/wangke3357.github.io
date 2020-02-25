@@ -156,6 +156,135 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-面试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/25/面试/">经典排序算法-冒泡排序算法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/25/面试/" class="archive-article-date">
+  	<time datetime="2020-02-25T00:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<ul>
+<li>[ 点击三角展开题目结果] <h2 id="java基础"><a href="#java基础" class="headerlink" title="java基础"></a>java基础</h2><details><br><summary>1. 简述java的前世今生,以及java与javaScript之间的区别?</summary><blockquote>
+<blockquote>
+<p> JavaScript 与Java是两个公司开发的不同的两个产品。Java 是原Sun Microsystems公司推出的面向对象的程序设计语言，特别适合于互联网应用程序开发；而JavaScript是Netscape公司的产品，为了扩展Netscape浏览器的功能而开发的一种可以嵌入Web页面中运行的基于对象和事件驱动的解释性语言。JavaScript的前身是LiveScript；而Java的前身是Oak语言。</p>
+</blockquote>
+</blockquote>
+</details></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>java</th>
+<th>javascript</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>面向对象的语言(强类型语言)</td>
+<td>脚本语言(弱类型语言)</td>
+</tr>
+<tr>
+<td>Java是一种真正的面向对象的语言<br>即使是开发简单的程序，必须设计对象</td>
+<td>JavaScript是种脚本语言，它可以用来制作<br>与网络无关的，与用户交互作用的复杂软件。</td>
+</tr>
+<tr>
+<td>Java的源代码在执行之前，必须经过编译</td>
+<td>javaScript是一种解释性编程语言，其源代码不需经过编译，由浏览器解释执行。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>强类型语言: 所有变量必须先声明后使用</p>
+</blockquote>
+<blockquote>
+<p>弱类型语言: 变量在使用前可以不需要声明</p>
+</blockquote>
+<hr>
+<p></p>
+<details><br><summary> 2. String 与 StringBuff之间的区别?</summary><br>1. String是什么?来自哪里?<br><br>&gt; &gt;    String是一种引用类型并且他来自java.lang.String类是final类型的，因此不可以继承这个类、不能修改这个类。为了提高效率节省空间，我们应该用StringBuffer类。<br><br>String | StringBuff<br>—|—<br>来自java.lang.String类 (该类为final类型)| 来自java.lang.StringBuff类<br>不可以继承这个类、不能修改这个类 | StringBuffer类弥补了String类的内容不能被修改的这个不足之处，StringBuffer类(又称字符缓冲区)表示的字符容器，其内容及长度可以被修改的，修改后不会产生新的StringBuffer对象<br>String类覆盖了Object类的equals()方法，而StringBuffer类没有| StringBuffer类没有<br>String类可以通过’+’对两个String对象进行拼接，而StringBuffer类不可以|StringBuffer类不可以<br><br>—<br><br></details>
+
+<details><br><summary>插入知识:谈谈关于Synchronized和lock? </summary><br>synchronized是Java的关键字，当它用来修饰一个方法或者一个代码块的时候，能够保证在同一时刻最多只有一个线程执行该段代码。JDK1.5以后引入了自旋锁、锁粗化、轻量级锁，偏向锁来有优化关键字的性能。<br><br>Lock是一个接口，而synchronized是Java中的关键字，synchronized是内置的语言实现；synchronized在发生异常时，会自动释放线程占有的锁，因此不会导致死锁现象发生；而Lock在发生异常时，如果没有主动通过unLock()去释放锁，则很可能造成死锁现象，因此使用Lock时需要在finally块中释放锁；Lock可以让等待锁的线程响应中断，而synchronized却不行，使用synchronized时，等待的线程会一直等待下去，不能够响应中断；通过Lock可以知道有没有成功获取锁，而synchronized却无法办到。<br></details>
+
+<details><br><summary>3. 请你讲讲数组(Array)和列表(ArrayList)的区别？什么时候应该使用Array而不是ArrayList？</summary><br>&gt; &gt; Array和ArrayList的不同点：<br>Array可以包含基本类型和对象类型，ArrayList只能包含对象类型。<br>Array大小是固定的，ArrayList的大小是动态变化的。<br>ArrayList提供了更多的方法和特性，比如：addAll()，removeAll()，iterator()等等。<br>对于基本类型数据，集合使用自动装箱来减少编码工作量。但是，当处理固定大小的基本数据类型的时候，这种方式相对比较慢。<br><br>数组(Array) | 列表(ArrayList)<br>—|—<br>Array可以包含基本类型和对象类型 | ArrayList只能包含对象类型<br>Array大小是固定的 | ArrayList的大小是动态变化的<br><br>—<br><br><br><br></details>
+
+
+<p></p>
+<details><br><summary>4. 请你解释什么是值传递和引用传递？</summary><br><br>值传递 | 引用传递<br>—|—<br>值传递是对基本型变量而言的,传递的是该变量的一个副本,改变副本不影响原变量.  | 引用传递一般是对于对象型变量而言的,传递的是该对象地址的一个副本, 并不是原对象本身 。 所以对引用对象进行操作会同时改变原对象.  1 col 2<br><br>—<br><br></details>
+
+<p></p>
+<details><br><summary>5. 请你讲讲Java支持的数据类型有哪些？什么是自动拆装箱？</summary><br>Java语言支持的8种基本数据类型是：<br>byte<br>short<br>int<br>long<br>float<br>double<br>boolean<br>char<br>自动装箱是Java编译器在基本数据类型和对应的对象包装类型之间做的一个转化。比如：把int转化成Integer，double转化成Double，等等。反之就是自动拆箱。<br><br>- [自动装箱]<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">基本数据类型--&gt;包装类型</span><br></pre></td></tr></table></figure><br><br>- [自动拆箱]<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">包装类型--&gt;基本数据类型</span><br></pre></td></tr></table></figure><br><br>—<br><br><br></details>
+
+<p></p>
+<details><br><summary>6. 请你解释Object若不重写hashCode()的话，hashCode()如何计算出来的？</summary><br>Object 的 hashcode 方法是本地方法，也就是用 c 语言或 c++ 实现的，该方法直接返回对象的 内存地址。<br></details><br><details><br><summary>7. 请你介绍一下map的分类和常见的情况</summary><br>java为数据结构中的映射定义了一个接口java.util.Map;它有四个实现类,分别是HashMap Hashtable LinkedHashMap 和TreeMap.<br><br>Map主要用于存储健值对，根据键得到值，因此不允许键重复(重复了覆盖了),但允许值重复。<br><br>Hashmap 是一个最常用的Map,它根据键的HashCode值存储数据,根据键可以直接获取它的值，具有很快的访问速度，遍历时，取得数据的顺序是完全随机的。 HashMap最多只允许一条记录的键为Null;允许多条记录的值为 Null;HashMap不支持线程的同步，即任一时刻可以有多个线程同时写HashMap;可能会导致数据的不一致。如果需要同步，可以用 Collections的synchronizedMap方法使HashMap具有同步的能力，或者使用ConcurrentHashMap。<br><br>Hashtable与 HashMap类似,它继承自Dictionary类，不同的是:它不允许记录的键或者值为空;它支持线程的同步，即任一时刻只有一个线程能写Hashtable,因此也导致了 Hashtable在写入时会比较慢。<br><br>LinkedHashMap 是HashMap的一个子类，保存了记录的插入顺序，在用Iterator遍历LinkedHashMap时，先得到的记录肯定是先插入的.也可以在构造时用带参数，按照应用次数排序。在遍历的时候会比HashMap慢，不过有种情况例外，当HashMap容量很大，实际数据较少时，遍历起来可能会比 LinkedHashMap慢，因为LinkedHashMap的遍历速度只和实际数据有关，和容量无关，而HashMap的遍历速度和他的容量有关。<br><br>TreeMap实现SortMap接口，能够把它保存的记录根据键排序,默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator 遍历TreeMap时，得到的记录是排过序的。<br><br>一般情况下，我们用的最多的是HashMap,在Map 中插入、删除和定位元素，HashMap 是最好的选择。但如果您要按自然顺序或自定义顺序遍历键，那么TreeMap会更好。如果需要输出的顺序和输入的相同,那么用LinkedHashMap 可以实现,它还可以按读取顺序来排列.<br><br>HashMap是一个最常用的Map，它根据键的hashCode值存储数据，根据键可以直接获取它的值，具有很快的访问速度。HashMap最多只允许一条记录的键为NULL，允许多条记录的值为NULL。<br><br>HashMap不支持线程同步，即任一时刻可以有多个线程同时写HashMap，可能会导致数据的不一致性。如果需要同步，可以用Collections的synchronizedMap方法使HashMap具有同步的能力。<br><br>Hashtable与HashMap类似，不同的是：它不允许记录的键或者值为空；它支持线程的同步，即任一时刻只有一个线程能写Hashtable，因此也导致了Hashtable在写入时会比较慢。<br><br>LinkedHashMap保存了记录的插入顺序，在用Iterator遍历LinkedHashMap时，先得到的记录肯定是先插入的。<br><br>在遍历的时候会比HashMap慢TreeMap能够把它保存的记录根据键排序，默认是按升序排序，也可以指定排序的比较器。当用Iterator遍历TreeMap时，得到的记录是排过序的。<br></details><br><details><br><summary>8. 请你解释为什么重写equals还要重写hashcode？</summary><br>HashMap中，如果要比较key是否相等，要同时使用这两个函数！因为自定义的类的hashcode()方法继承于Object类，其hashcode码为默认的内存地址，这样即便有相同含义的两个对象，比较也是不相等的。HashMap中的比较key是这样的，先求出key的hashcode(),比较其值是否相等，若相等再比较equals(),若相等则认为他们是相等的。若equals()不相等则认为他们不相等。如果只重写hashcode()不重写equals()方法，当比较equals()时只是看他们是否为同一对象（即进行内存地址的比较）,所以必定要两个方法一起重写。HashMap用来判断key是否相等的方法，其实是调用了HashSet判断加入元素 是否相等。重载hashCode()是为了对同一个key，能得到相同的Hash Code，这样HashMap就可以定位到我们指定的key上。重载equals()是为了向HashMap表明当前对象和key上所保存的对象是相等的，这样我们才真正地获得了这个key所对应的这个键值对。<br></details>
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/25/面试/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-经典排序算法_冒泡排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -904,11 +1033,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">恋爱日记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">恋爱日记</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -916,7 +1049,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>
